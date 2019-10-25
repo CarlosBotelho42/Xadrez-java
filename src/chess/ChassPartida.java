@@ -2,6 +2,8 @@ package chess;
 
 import boardgame.Board;
 import boardgame.Position;
+import chess.pieces.Cavalo;
+import chess.pieces.Rainha;
 import chess.pieces.Rei;
 import chess.pieces.Torre;
 
@@ -27,11 +29,29 @@ public class ChassPartida {
 		
 	}
 	
+	private void lugarNovapeca(char colum, int row, ChessPiece piece) {
+		board.placePiece(piece, new ChessPosition(colum, row).toPosition());
+		
+	}
+	
 	private void initialSetup() {
-		board.placePiece(new Torre(board, Color.WHITE), new Position(0, 0));
-		board.placePiece(new Torre(board, Color.BLACK), new Position(7, 0));
+		lugarNovapeca('a', 8, new Torre(board, Color.WHITE));
+		lugarNovapeca('h', 8, new Torre(board, Color.WHITE));
+		lugarNovapeca('a', 1, new Torre(board, Color.BLACK));
+		lugarNovapeca('h', 1, new Torre(board, Color.BLACK));
+		/*board.placePiece(new Torre(board, Color.BLACK), new Position(7, 0));
+		board.placePiece(new Torre(board, Color.WHITE), new Position(7, 7));
+		board.placePiece(new Torre(board, Color.BLACK), new Position(0, 7));
 		board.placePiece(new Rei(board, Color.WHITE), new Position(0, 4));
 		board.placePiece(new Rei(board, Color.BLACK), new Position(7, 4));
+		board.placePiece(new Rainha(board, Color.WHITE), new Position(0, 3));
+		board.placePiece(new Rainha(board, Color.WHITE), new Position(7, 3));
+		board.placePiece(new Cavalo(board, Color.WHITE), new Position(0, 1));
+		board.placePiece(new Cavalo(board, Color.BLACK), new Position(7, 1));
+		board.placePiece(new Cavalo(board, Color.WHITE), new Position(0, 6));
+		board.placePiece(new Cavalo(board, Color.BLACK), new Position(7, 6));*/
+		
+		
 	}
 	
 }

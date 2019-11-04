@@ -1,10 +1,10 @@
 package chess;
 
 import boardgame.Board;
-/*import boardgame.Position;
+import boardgame.Position;
 import chess.pieces.Cavalo;
 import chess.pieces.Rainha;
-import chess.pieces.Rei;*/
+import chess.pieces.Rei;
 import chess.pieces.Torre;
 
 public class ChassPartida {
